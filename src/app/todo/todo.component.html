@@ -1,0 +1,33 @@
+<div>
+    <header>
+        <h1>Welcome to the To-Do List App!</h1>
+        <h2>To-Do List</h2>
+    </header>
+    <div class="tasks-div">
+        <div class="tasks-sub-div">
+            <span>
+                <input type="text" [(ngModel)]="newTask" placeholder="Enter New task" />
+                <button (click)="addTask()">Add</button>
+            </span>
+    
+            <div class="tasks">
+                <ul>
+                    <li *ngFor="let task of tasks">
+                        <input type="checkbox" [checked]="task.completed" (change)="toggleTaskCompletion(task)" />&nbsp;
+                        <span [ngClass]="{ 'completed': task.completed }" class="task-name">{{ task.name }}</span>
+                        <button (click)="deleteTask(task)" class="delete-button">Delete</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div *ngIf="allTasksCompleted()" class="success">
+            <p>All tasks are completed! 🎉</p>
+        </div>
+
+        <button (click)="clearCompletedTasks()" *ngIf="hasCompletedTasks()" class="clear">
+            Clear Completed Tasks
+        </button>
+    </div>
+
+</div>

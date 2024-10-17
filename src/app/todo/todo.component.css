@@ -1,0 +1,85 @@
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 1rem;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tasks-div {
+    background-color: #4ecdc4;
+    height: calc(100vh - 15vh - 2rem);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tasks-sub-div {
+    position: relative;
+    margin-top: 2rem;
+}
+
+input[type='text'] {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border: none;
+    font-size: large;
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    margin-right: 1rem;
+}
+
+.tasks {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul {
+    max-width: 20rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.task-name {
+    padding: 0 2rem 0 0;
+    width: 2rem;
+    overflow-wrap: break-word;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+button {
+    margin: 5px;
+    padding: 0.2rem 1rem;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    border: none;
+}
+
+
+.success {
+    margin: 2rem;
+    font-size: x-large;
+    color: #1a535c;
+}
+
+.clear {
+    padding: 1rem;
+    font-size: large;
+    background-color: #ecf0f1;
+    border: none;
+    color: #e74c3c;
+}
